@@ -5,10 +5,7 @@ node {
 	 
 	    def dockerImageTag = "aws-demo${env.BUILD_NUMBER}"
 	    
-	    stage('Clone Repo') { 
-	      git 'https://github.com/chanchalabiswas/aws-demo.git'
-	      mvnHome = tool 'maven-3.5.2'
-	    }    
+  
 	  
 	    stage('Build Project') {
 	      sh "'${mvnHome}/bin/mvn' clean install"
