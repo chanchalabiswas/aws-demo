@@ -6,7 +6,7 @@ node {
 	    def dockerImageTag = "aws-demo${env.BUILD_NUMBER}"
 	    
 	    stage('Clone Repo') { 
-	      git 'https://github.com/chanchalabiswas/aws-demo.git'
+		  git([url: 'https://github.com/chanchalabiswas/aws-demo', branch: 'main'])
 	      mvnHome = tool 'maven-3.5.2'
 	    }    
 	  
